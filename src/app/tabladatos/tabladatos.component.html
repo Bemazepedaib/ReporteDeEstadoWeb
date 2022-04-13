@@ -1,0 +1,13 @@
+<div>
+    <ngx-datatable 
+    class="bootstrap" 
+    [rows]="rows" 
+    [rowHeight]="50"
+    [columns]="columns"
+    columnMode="force">
+        <ngx-datatable-column name="No" [width]="10"></ngx-datatable-column>
+        <ngx-datatable-column name="Estado" [width]="10" headerClass="is-gender" [cellClass]="getCellClass"></ngx-datatable-column>
+        <ngx-datatable-column name="Pagina" [sortable]="false"></ngx-datatable-column>
+        <ngx-datatable-column name="Enlace" [sortable]="false"></ngx-datatable-column>
+    </ngx-datatable>
+</div>
