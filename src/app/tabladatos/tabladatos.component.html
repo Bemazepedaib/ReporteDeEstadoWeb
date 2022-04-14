@@ -1,13 +1,34 @@
+<hr>
+<h3>Dependencias</h3>
+<hr>
 <div>
-    <ngx-datatable 
-    class="bootstrap" 
-    [rows]="rows" 
-    [rowHeight]="50"
-    [columns]="columns"
-    columnMode="force">
-        <ngx-datatable-column name="No" [width]="10"></ngx-datatable-column>
-        <ngx-datatable-column name="Estado" [width]="10" headerClass="is-gender" [cellClass]="getCellClass"></ngx-datatable-column>
-        <ngx-datatable-column name="Pagina" [sortable]="false"></ngx-datatable-column>
-        <ngx-datatable-column name="Enlace" [sortable]="false"></ngx-datatable-column>
+    <ngx-datatable class="bootstrap" [rows]="rows1" [rowHeight]="50" [columns]="columns1" columnMode="flex">
+        <ngx-datatable-column name="No" [flexGrow]="1"></ngx-datatable-column>
+        <ngx-datatable-column name="Estado" [flexGrow]="1" headerClass="is-gender" [cellClass]="getCellClass"></ngx-datatable-column>
+        <ngx-datatable-column name="Pagina" [sortable]="false" [flexGrow]="8"></ngx-datatable-column>
+        <ngx-datatable-column name="Enlace" [sortable]="false" [flexGrow]="8">
+            <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
+                <a class="nav-link" (click)="visitarlink(row)">
+                    {{value}} 
+                  </a>
+              </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+</div>
+<hr>
+<h3>Organismos</h3>
+<hr>
+<div>
+    <ngx-datatable class="bootstrap" [rows]="rows2" [rowHeight]="50" [columns]="columns2" columnMode="flex">
+        <ngx-datatable-column name="No" [flexGrow]="1"></ngx-datatable-column>
+        <ngx-datatable-column name="Estado" [flexGrow]="1" headerClass="is-gender" [cellClass]="getCellClass"></ngx-datatable-column>
+        <ngx-datatable-column name="Pagina" [sortable]="false" [flexGrow]="8"></ngx-datatable-column>
+        <ngx-datatable-column name="Enlace" [sortable]="false" [flexGrow]="8">
+            <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
+                <a class="nav-link" (click)="visitarlink(row)">
+                    {{value}} 
+                  </a>
+              </ng-template>
+        </ngx-datatable-column>
     </ngx-datatable>
 </div>

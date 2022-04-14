@@ -1,7 +1,22 @@
-/deep/.is-activo{
-    background-color: rgb(216,243,220);
-    
+/deep/.is-activo {
+    color: black;
+    background-color: rgb(216, 243, 220);
+    border-radius: 25px;
 }
-/deep/.is-inactivo{
-    background-color: red;
+
+/deep/.is-inactivo {
+    color: white;
+    background-color: rgba(255, 0, 0, 0.607);
+    border-radius: 25px;
+}
+/deep/.is-warning{
+    color: black;
+    background-color: rgba(251, 255, 0, 0.736);
+    border-radius: 25px;
+}
+h3{
+    align-self: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }

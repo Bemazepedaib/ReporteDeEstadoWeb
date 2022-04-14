@@ -7,5 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ReporteDeEstadoWeb';
-
+  constructor() {
+    let counter = 1
+    setInterval(() => {
+      counter++
+      if (counter > 60) { location.reload(); counter = 1 }
+    }, 1000)
+  }
 }
