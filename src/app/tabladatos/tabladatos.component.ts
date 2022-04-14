@@ -38,15 +38,17 @@ export class tabladatosComponent{
   a = dependencias[0].split("|")
   rows = [{'no':(1).toString(),'estado':estadoCheck(this.a[1]),'pagina':this.a[0],'enlace':this.a[1] }];
   columns = [{ prop: 'No'}, {name: 'Estado'}, {name: 'Pagina'},{name: 'Enlace'}];
+  
   constructor(){
     for(let i=1; i<dependencias.length; i++){
       var depe = dependencias[i].split("|")
       this.rows.push({'no':(i+1).toString(),'estado':estadoCheck(depe[1]),'pagina':depe[0],'enlace':depe[1]})
+      this.columns.pop
     }
   }
-  getCellClass({ row, column, value }:any): any {
+  getCellClass({row,column,value}: any): any {
     return {
-      'is-activo': value === 'activo'
+      'is-activo': value === 'Activo'
     };
   }
 }
@@ -54,6 +56,7 @@ function estadoCheck(link:String) : String{
   var a = "Activo";
   return a
 }
+
 
 /*
 

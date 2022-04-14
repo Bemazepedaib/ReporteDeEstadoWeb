@@ -1,0 +1,7 @@
+/deep/.is-activo{
+    background-color: rgb(216,243,220);
+    
+}
+/deep/.is-inactivo{
+    background-color: red;
+}
